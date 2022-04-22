@@ -2,9 +2,16 @@ import Link from "next/link";
 import { SunIcon } from "@heroicons/react/outline";
 import { MoonIcon } from "@heroicons/react/outline";
 import { useTheme } from "next-themes";
+import { withRouter } from "next/router";
 
-function Header() {
+function Header({ router }) {
   const { theme, setTheme } = useTheme();
+  const navs = [
+    { text: "Home", href: "/" },
+    { text: "Sell Digital Asset", href: "/create-item" },
+    { text: "My Digital Assets", href: "/my-assets" },
+    { text: "Creator Dashboard", href: "/creator-dashboard" },
+  ];
   return (
     <div className="border-b p-6">
       <div className="flex justify-between">
@@ -28,7 +35,22 @@ function Header() {
         </div>
       </div>
       <div className="flex mt-4">
-        <Link href="/">
+        <ul className="flex mr-auto list-none">
+          {navs.map((nav) => (
+            <li key={nav.text}>
+              <Link href={nav.href}>
+                <a
+                  className={`mr-6 text-pink-500 ${
+                    router.pathname == nav.href ? "active" : ""
+                  }`}
+                >
+                  {nav.text}
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        {/* <Link href="/">
           <a className="mr-6 text-pink-500">Home</a>
         </Link>
         <Link href="/create-item">
@@ -39,10 +61,10 @@ function Header() {
         </Link>
         <Link href="/creator-dashboard">
           <a className="mr-6 text-pink-500">Creator Dashboard</a>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
 }
 
-export default Header;
+export default withRouter(Header);
