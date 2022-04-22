@@ -68,22 +68,22 @@ function HomePage() {
   }
 
   if (loadingState === "loaded" && !nfts.length)
-    return <h1 className="6px-20 py-10 text-3xl">No items in marketplace</h1>;
+    return <h1 className="px-20 py-10 text-3xl">No items in marketplace</h1>;
   return (
     <div className="flex justify-center">
       <div className="px-4" style={{ maxWidth: "1600px" }}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
           {nfts.map((nft, i) => (
             <div key={i} className="border shadow rounded-xl overflow-hidden">
-              <Image src={nft.image} alt="Nft" />
+              <Image src={nft.image} alt="Nft" width={350} height={200} />
               <div className="p-4">
                 <p
-                  style={{ height: "64px" }}
+                  style={{ height: "44px" }}
                   className="text-2xl font-semibold"
                 >
                   {nft.name}
                 </p>
-                <div style={{ height: "70px", overflow: "hidden" }}>
+                <div style={{ height: "50px", overflow: "hidden" }}>
                   <p className="text-gray-400">{nft.description}</p>
                 </div>
               </div>

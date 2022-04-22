@@ -1,16 +1,16 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import CreateItem from "../components/CreateItem";
+import Assets from "../components/Assets";
 
-function CreateNewItem() {
+function MyAssets() {
   return (
     <div className="p-0 px-8">
       <Header />
-      <CreateItem />
+      <Assets />
       <Footer />
     </div>
   );
 }
 
-export default CreateNewItem;
+export default MyAssets;
