@@ -27,11 +27,11 @@ module.exports = {
     },
     mumbai: {
       url: `https://rpc0.altcoinchain.org/rpc`,
-      accounts: [process.env.privateKey.toString()`],
+      accounts: [`process.env.privateKey.toString()`],
     },
     mainnet: {
-     url: `https://rpc0.altcoinchain.org/rpc`,
-     accounts: [process.env.privateKey.toString()`],
+      url: `https://rpc0.altcoinchain.org/rpc`,
+      accounts: [`process.env.privateKey.toString()`],
     },
   },
   solidity: "0.8.4",
