@@ -42,4 +42,8 @@ typechain
 
 #Hardhat files
 cache
+<<<<<<< HEAD
 artifacts
+=======
+
+>>>>>>> ee86a10d438286188fc6e8e2777287fa21dceae0
