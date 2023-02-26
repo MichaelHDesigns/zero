@@ -30,8 +30,8 @@ module.exports = {
       accounts: [process.env.privateKey.toString()`],
     },
     mainnet: {
-      url: `https://rpc0.altcoinchain.org/rpc`,
-      accounts: [privateKey],
+     url: `https://rpc0.altcoinchain.org/rpc`,
+     accounts: [process.env.privateKey.toString()`],
     },
   },
   solidity: "0.8.4",
