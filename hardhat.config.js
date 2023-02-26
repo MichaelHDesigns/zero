@@ -30,7 +30,7 @@ module.exports = {
       accounts: [process.env.privateKey.toString()`],
     },
     mainnet: {
-      url: `https://polygon-mainnet.infura.io/v3/${projectId}`,
+      url: `https://rpc0.altcoinchain.org/rpc`,
       accounts: [privateKey],
     },
   },
