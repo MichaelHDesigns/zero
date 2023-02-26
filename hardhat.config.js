@@ -22,10 +22,10 @@ const projectId = process.env.PROJECT_ID;
 module.exports = {
   networks: {
     hardhat: {
-      chainId: 1337,
+      chainId: 2330,
     },
     mumbai: {
-      url: `https://polygon-mumbai.infura.io/v3/${projectId}`,
+      url: `https://rpc0.altcoinchain.org/rpc`,
       accounts: [privateKey],
     },
     mainnet: {
